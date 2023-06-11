@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="globals.css" />
+    <title>Detalhes</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"
+            ><img class="ml-2 logotipo" src="img/logotipo.png" alt=""
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <form class="col-lg-8 mx-auto">
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Pesquisar..."
+                  id="palavraChaveInput"
+                />
+                <button
+                  type="button"
+                  class="btn btn-outline-success fa fa-search"
+                  onclick="pesquisar()"
+                ></button>
+              </div>
+            </form>
+            <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Carrinho</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="d-flex flex-wrap" id="detalhesProduto"></section>
+
+    <footer class="footer-color container-fluid">
+      <div class="my-md-3 row text-center d-flex justify-content-center">
+        <div class="col-12 col-md col-lg-2">
+          <h5 class="text">Pagamentos</h5>
+          <!--ICON PIX-->
+          <img src="img/pix.svg" alt="" />
+          <!--FIM ICON PIX-->
+          <!--ICON PAYPAL-->
+          <img src="img/paypal.svg" alt="" />
+          <!--FIM PAYPAL-->
+          <!--ICON MASTERCARD-->
+          <img src="img/mastercard.svg" alt="" />
+          <!--FIM MASTERCARD-->
+          <!--ICON VISA-->
+          <img src="img/visa.svg" alt="" />
+          <!--FIM VISA-->
+        </div>
+        <div class="col-6 col-md col-lg-3">
+          <h5>Informações</h5>
+          <ul class="list-unstyled text-small texto-footer">
+            <li><a class="nav-link" href="#">Ajuda</a></li>
+            <li><a class="nav-link" href="#">Carrinho</a></li>
+            <li><a class="nav-link" href="#">Produtos</a></li>
+            <li><a class="nav-link" href="#">Mais vendidos</a></li>
+          </ul>
+        </div>
+
+        <div class="pb-4 col-6 col-md col-lg-3">
+          <h5>Contatos</h5>
+          <ul class="list-unstyled text-small texto-footer">
+            <li><a class="nav-link" href="#">(31) 99999-9999</a></li>
+            <li><a class="nav-link" href="#">gamesp@gmail.com</a></li>
+          </ul>
+          <div class="flex flex-g-1">
+            <h5>Redes sociais</h5>
+            <img src="img/instagram.svg" alt="" />
+            <img src="img/linkedin.svg" alt="" />
+            <img src="img/facebook.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <p class="mb-0 text-center">
+        Todos os direitos reservados. Games shop © 2023.
+      </p>
+    </footer>
+    <script src="js/pesquisa.js"></script>
+    <script src="js/detalhes.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

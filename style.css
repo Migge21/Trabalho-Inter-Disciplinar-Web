@@ -1,0 +1,113 @@
+/* div {
+  border: 1px solid black;
+} */
+header {
+  margin-bottom: 30px;
+}
+.logotipo {
+  width: 100px;
+  height: 100px;
+}
+/*CARD*/
+.CardContainer {
+  width: 250px;
+  height: 400px;
+  border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  padding: 20px;
+}
+.CardTitulo {
+  font-size: 13px;
+  padding-top: 20px;
+}
+.CardConteudo {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+}
+.checked {
+  color: orange;
+}
+.corpo-cards-cinzas {
+  margin-bottom: 15px;
+  border: 1px solid red;
+  margin: 0 auto;
+  width: 500px;
+  height: fit-content;
+}
+.CardConteudoEsquerda {
+  display: flex;
+  margin: 20px;
+  align-items: center;
+}
+.imagem_venda_esquerda {
+  height: 90px;
+  width: 90px;
+}
+
+@media (max-width: 991px) {
+  .CardContainer {
+    width: 200px;
+  }
+}
+@media (max-width: 575.98px) {
+  .containerEsquerda {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .containerEsquerda > section {
+    justify-content: center;
+  }
+}
+
+.DetalhesContainer {
+  border: 2px solid red;
+  width: 80%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+}
+.separacao {
+  display: flex;
+}
+.produto-detalhesimg {
+  width: 400px;
+  height: 300px;
+}
+
+.h3 span,
+h4 span,
+.DetalhesDescricao {
+  color: green !important;
+}
+
+.has-search .form-control-feedback {
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  padding-left: 630px;
+  pointer-events: none;
+  color: #aaa;
+}
+
+@media (max-width: 575.98px) {
+  .DetalhesContainer {
+    flex-wrap: wrap;
+    width: fit-content;
+  }
+  .separacao {
+    flex-wrap: wrap;
+  }
+  .produto-detalhesimg {
+    width: 330px;
+    height: 220px;
+  }
+}
