@@ -13,10 +13,11 @@ function buscarPorPalavraChave() {
   //     return;
   //   }
 
-  fetch("https://fakestoreapi.com/products/category/electronics")
+  fetch("https://diwserver.vps.webdock.cloud/products?page=560")
     .then((resposta) => resposta.json())
     .then((dados) => {
-      var produtosRelacionados = dados.filter(function (produto) {
+      const produtos = dados.products;
+      var produtosRelacionados = produtos.filter(function (produto) {
         return produto.title.toLowerCase().includes(palavraChave.toLowerCase());
       });
 
@@ -24,28 +25,28 @@ function buscarPorPalavraChave() {
 
       var cc = produtosRelacionados
         .map(function (produto) {
-          return `<div class="d-flex flex-row justify-content-center m-2">
-          <div class="DetalhesContainer">
-            <div class="DetalhesConteudo">
-              <div class="separacao">
-                <div class="pr-2">
-                  <img
-                  class="produto-detalhesimg"
-                    src="${produto.image}"
-                    alt=""
-                  />
-                </div>
-                <div class="p-3 ColorVar">
-                  <h3 >${produto.title}</span></h3>
-                  <h4 >Avaliações: <span>${produto.rating.rate}</span></h4>
-                  <h4>Preço: <span>$${produto.price}</span></h4>
-                  
-                  <h3>Descrição:<br /></h3>
-                  <p class="DetalhesDescricao">${produto.description}</p>
-                  <a class="btn btn-outline-danger">Comprar</a>
-                  <a class="btn btn-outline-success" href="index.html">Voltar</a>
-                </div>
-              </div>
+          return `<div class="CardContainer">
+          <div class="CardConteudo">
+            <img
+              src="${produto.image}"
+              alt=""
+              height="150px"
+            />
+            <h4 class="CardTitulo">${produto.title}</h4>
+            
+            <div class="small">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              (${produto.rating.rate})
+            </div>
+            <div class="d-flex flex-column">
+              <b>
+                <p>$${produto.price}</p>
+              </b>
+              <a class="btn btn-outline-success" href="detalhes.html?id=${produto.id}">Detalhes</a>
             </div>
           </div>
         </div>

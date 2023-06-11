@@ -1,7 +1,7 @@
-function Mostrar(arroz) {
+function Mostrar(tudo) {
   var conteudoPrincipal = document.getElementById("Principal");
 
-  var cc = arroz
+  var cc = tudo
     .map(function (produto) {
       return `<div class="CardContainer">
         <div class="CardConteudo">
@@ -35,10 +35,10 @@ function Mostrar(arroz) {
   conteudoPrincipal.innerHTML += cc;
 }
 
-function MaisProcurados(arroz, limite) {
+function MaisProcurados(tudo, limite) {
   var conteudoPrincipal = document.getElementById("Procurados");
 
-  var cc = arroz
+  var cc = tudo
     .slice(0, limite)
     .map(function (produto) {
       return `<div>
@@ -73,17 +73,25 @@ function MaisProcurados(arroz, limite) {
     </div>`;
     })
     .join("");
-
+  // 1179
+  // 560
   conteudoPrincipal.innerHTML += cc;
 }
 
 function buscarNoServidor() {
-  fetch("https://fakestoreapi.com/products/category/electronics")
+  fetch("https://diwserver.vps.webdock.cloud/products?page=560")
     .then((resposta) => resposta.json())
     .then((dados) => {
-      Mostrar(dados);
-      MaisProcurados(dados, 3);
+      const produtos = dados.products;
+      Mostrar(produtos);
+      MaisProcurados(produtos, 3);
+    })
+    .catch((erro) => {
+      console.log("Erro na chamada da API:", erro);
     });
 }
 
+window.onload = buscarNoServidor;
+
+console.log(buscarNoServidor());
 window.onload = buscarNoServidor();

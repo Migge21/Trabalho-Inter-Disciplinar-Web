@@ -1,5 +1,5 @@
 function detalharProdutos(idProduto) {
-  let requisicao = "https://fakestoreapi.com/products/" + idProduto;
+  let requisicao = "https://diwserver.vps.webdock.cloud/products/" + idProduto;
   fetch(requisicao)
     .then((res) => res.json())
     .then((produto) => exibirDetalhes(produto));
@@ -28,7 +28,7 @@ function exibirDetalhes(produto) {
           <h4>Preço: <span>$${produto.price}</span></h4>
           
           <h3>Descrição:<br /></h3>
-          <p class="DetalhesDescricao">${produto.description}</p>
+          <div class="DetalhesDescricao mb-3">${produto.description}</div>
           <a class="btn btn-outline-danger">Comprar</a>
           <a class="btn btn-outline-success" href="index.html">Voltar</a>
         </div>
