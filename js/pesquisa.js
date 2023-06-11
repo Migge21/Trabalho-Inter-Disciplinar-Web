@@ -1,6 +1,5 @@
 function pesquisar() {
   var palavraChave = document.getElementById("palavraChaveInput").value;
-
   window.location.href = "pesquisa.html?search=" + palavraChave;
 }
 
